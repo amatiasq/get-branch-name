@@ -1,0 +1,8 @@
+name: 'Get branch name'
+description: 'Extract the name of the branch pushed or in PR'
+outputs:
+  branch:
+    description: 'The name of the branch'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

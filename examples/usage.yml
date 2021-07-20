@@ -1,0 +1,12 @@
+on: [push, pull_request]
+
+jobs:
+  get-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get branch
+        uses: amatiasq/get-branch-name
+        id: branch
+
+      - name: Get the output
+        run: echo "BRANCH ${{ steps.branch.outputs.branch }}"
